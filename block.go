@@ -853,9 +853,9 @@ func (p *Markdown) tableHeader(data []byte) (size int, columns []CellAlignFlags)
 		}
 		// end of column test is messy
 		switch {
-		case dashes < 3:
-			// not a valid column
-			return
+		//case dashes < 3:
+		//	// not a valid column
+		//	return
 
 		case data[i] == '|' && !isBackslashEscaped(data, i):
 			// marker found, now skip past trailing whitespace
