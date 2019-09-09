@@ -182,7 +182,7 @@ func maybeLineBreak(p *Markdown, data []byte, offset int) (int, *Node) {
 	}
 
 	if offset < len(data) && data[offset] == '\n' {
-		if offset-origOffset >= 2 {
+		if offset-origOffset >= 0 {
 			return offset - origOffset + 1, NewNode(Hardbreak)
 		}
 		return offset - origOffset, nil
